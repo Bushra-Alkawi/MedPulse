@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedPulse | فقدان الوزن</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="bg-fifth-color dark:bg-third-dark fixed shadow-xs w-full z-20 top-0 start-0 border-default">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="assets/images/logo.png" class="h-[70px] object-cover" alt="medPulse Logo" />
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="text-white bg-new-color
+                               rounded-[5px]
+                 hover:bg-brand-strong box-border border 
+                    border-transparent focus:ring-4 
+                    focus:ring-brand-medium shadow-xs font-medium leading-7 rounded-base text-sm px-3 
+                    py-2 focus:outline-none cursor-pointer md:text-xl text-lg">تسجيل الدخول</button>
+                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body dark:text-white
+                     rounded-base md:hidden hover:bg-neutral-secondary-soft
+                      hover:text-heading focus:outline-none" aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                            d="M5 7h14M5 12h14M5 17h14" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between text-xl hidden w-full md:flex md:w-auto md:order-1"
+                id="navbar-sticky">
+                <ul class="flex items-center flex-col p-4 md:p-0 mt-4 font-medium border border-default
+                     rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row 
+                     md:mt-0 md:border-0 md:bg-neutral-primary text-seventh-color dark:text-fifth-dark">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                            aria-current="page">الرئيسية</a>
+                    </li>
+                    <li>
+                        <a href="index.html#all-courses" class="block py-2 px-3 text-heading 
+                            rounded hover:bg-neutral-tertiary md:hover:bg-transparent 
+                            md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">الكورسات</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">الاستشارات</a>
+                    </li>
+                    <li>
+                        <a href="index.html#all-blogs" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent 
+                            md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">المدونة</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary 
+                            md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0
+                             md:dark:hover:bg-transparent">اتصل بنا</a>
+                    </li>
+
+                    <li class="mr-5">
+                        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 
+                            dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+                            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+
+    <!-- Course Page Header Start -->
+    <section class=" mt-[70px] py-[30px] bg-second-color dark:bg-fourth-dark">
+        <div class="max-w-7xl mx-auto page-header flex justify-between">
+            <div class="grow flex flex-col justify-center items-center">
+                <h1 class="text-4xl font-bold text-sixth-color dark:text-fifth-dark mb-5 text-center ">من الإبر إلى الحبوب: مستقبل
+                    علاجات فقدان الوزن في
+                    2027</h1>
+                <p class="mb-5 font-bold text-seventh-color dark:text-fifth-dark">الكاتبة: <span>ثواب الغبرة</span></p>
+                <div class="flex gap-3 text-seventh-color dark:text-fifth-dark">
+                    <div>
+                        <i class="fa-regular fa-square-check"></i>
+                        آب / 2026
+                    </div>
+
+                    <div>
+                        <i class="fa-solid fa-globe"></i>
+                        العربية
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Course Page Header End -->
+
+    <!--  -->
+    <section class="blog-content px-[20px] dark:bg-needed-dark dark:text-fifth-dark">
+        <div class="flex flex-col md:flex-row justify-between gap-5 max-w-7xl mx-auto">
+            <div class="content grow my-5">
+                <!-- breadcrumb start -->
+                <nav class="flex mb-5" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                        <li class="inline-flex items-center">
+                            <a href="index.html"
+                                class="inline-flex items-center text-sm font-medium text-body hover:text-fg-brand">
+                                <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
+                                </svg>
+                                الرئيسية
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center space-x-1.5">
+                                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m9 5 7 7-7 7" />
+                                </svg>
+                                <a href="#" class="inline-flex items-center text-sm font-medium
+                                     text-body hover:text-fg-brand"> الريجيم وتخفيف الوزن</a>
+                            </div>
+                        </li>
+                        <li aria-current="page">
+                            <div class="flex items-center space-x-1.5">
+                                <svg class="w-3.5 h-3.5 rtl:rotate-180 text-body" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m9 5 7 7-7 7" />
+                                </svg>
+                                <span class="inline-flex items-center text-sm font-medium text-body-subtle">
+                                    من الإبر إلى الحبوب: مستقبل علاجات فقدان الوزن في 2027
+                                </span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- breadcrumb end -->
+
+
+
+                <img class="rounded-t-[10px] w-full" src="assets/images/diet.png" alt="">
+
+                <div class="flex justify-between bg-fifth-color dark:bg-fourth-dark 
+                 rounded-[5px] items-center p-3 mt-5">
+                    <div class="flex gap-3 text-gray-500 dark:text-fifth-dark">
+                        <div>
+                            <i class="fa-regular fa-square-check"></i>
+                            آب / 2026
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-globe"></i>
+                            العربية
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3 text-gray-500 dark:text-black">
+                        <div>
+                            <a href=""><i class="fa-brands fa-square-whatsapp text-3xl text-green-400"></i></a>
+                        </div>
+                        <div>
+                            <a href=""><i class="fa-brands fa-square-facebook text-3xl text-blue-400"></i></a>
+                        </div>
+                        <div>
+                            <a href=""><i class="fa-brands fa-square-instagram text-3xl"
+                                    style="color: #E1306C;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="desc" class="mt-5">
+
+                    <p class="mt-5 leading-9">
+                        تطوّرت علاجات فقدان الوزن بشكل ملحوظ في الفترة الأخيرة، حيث كان اتباع النظام الغذائي الصحي
+                        وممارسة الرياضة الطريقة الأساسية لفقدان الوزن، ثم ظهرت أدوية حديثة ذات فعالية عالية تستهدف آليات
+                        بيولوجية في الجسم، وفي عام 2026 زاد الاهتمام نحو التحول من الإبر إلى الحبوب والكبسولات.
+
+
+                    </p>
+                    <p class="mt-5 leading-9">
+                        مميزات التحول إلى العلاج الفموي في 2026
+                        في عام 2026، أصبح علاج السمنة أسهل بعد استحداث حبوب لإنقاص الوزن من شركة إيلاي ليلي (Eli Lilly)
+                        ونوفو نورديسك وغيرهما، ومنقذًا للأشخاص الذين لا يفضّلون استخدام الإبر، كما رفع نسبة الالتزام
+                        بالعلاج مقارنةً بالحقن.
+
+
+                    <p class="mt-5 leading-9">
+                        أحدثت شركة إيلاي ليلي في عام 2026 ثورةً في تسهيل بروتوكولات العلاج؛ حيث قدّمت عقار فاندايو كحبة
+                        يومية تستهدف هرمون GLP-1 بفعالية عالية، واعتمدت في الجيل الجديد من الحبوب على آليات كيميائية
+                        حيوية فائقة الدقة تستهدف ثلاثة هرمونات حيوية في آنٍ واحد، وهي: GLP-1 لتقليل الشهية، GIP لتحسين
+                        حرق الدهون وحماية العضلات، Glucagon لزيادة استهلاك الطاقة في الجسم حتى أثناء الراحة، ممّا رفع
+                        معدل فقدان الوزن بنسبة تتجاوز 25-30% من إجمالي وزن الجسم، وهي أرقام لم تتحقق سابقًا إلا
+                        بالعمليات الجراحية، وهو ما يظهر بوضوح في عقار ريتاتروتايد (Retatrutide).
+                    </p>
+
+                    <img class="mt-5 w-full object-cover rounded-[10px]" src="assets/images/cap1.jpg" alt="">
+
+                    <p class="mt-5 leading-9">
+                        أبرز منتجات الحبوب من شركة ليلي لعلاج السمنة
+                        عقار فاندايو (Foundayo): حصلت شركة ليلي على موافقة إدارة الغذاء والدواء (FDA) في أبريل من عام
+                        2026، لعقار فاندايو (الاسم العلمي: Orforglipron)، وهي أول حبة يومية من نوع GLP-1 غير ببتيدية،
+                        مما يعني أنها لا تتأثر بالعصارات الهضمية، يمكن تناولها في أي وقت من اليوم، دون قيود على الطعام
+                        أو الماء، عكس الحبوب السابقة التي كانت تتطلب معدة فارغة تمامًا.
+
+                        عقار ريتاتروتايد (Retatrutide): هذا المنتج الجديد لعام 2026 من ليلي هو منشط ثلاثي (Triple
+                        Agonist) يستهدف ثلاثة هرمونات مختلفة في وقت واحد، يساهم في فقدان الوزن بشكل فعّال، بالإضافة إلى
+                        تحسين مستويات الكوليسترول وضغط الدم بشكل ملحوظ، وحتى أبريل 2026 لا يزال قيد المراجعة النهائية.
+
+                        كبسولة الأميلين (Amylin Analogues): حتى أبريل من عام 2026 لا يزال قيد التطوير المتقدم، حيث تعمل
+                        ليلي على جيل جديد من الأدوية التي لا تعتمد فقط على هرمونات الأمعاء، بل تستهدف أيضًا هرمون
+                        الأميلين الذي يفرزه البنكرياس لتعزيز الشعور بالشبع وحماية الكتلة العضلية أثناء فقدان الدهون، وهو
+                        الحل الأمثل لكبار السن الذين يحتاجون لفقدان الدهون دون إضعاف بنيتهم الجسدية.
+
+                    </p>
+                </div>
+
+                <div class="reviews max-w-7xl mx-auto md:mb-5">
+                    <h2 class="text-3xl font-bold mt-10 text-seventh-color dark:text-fifth-dark">التقييمات</h2>
+                    <div class="flex items-center gap-5">
+
+
+                        <!-- <h3 class="text-3xl font-bold my-5 text-blue-500">250</h3> -->
+                        <div class="stars my-5 flex gap-3 text-yellow-500 text-2xl">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="progress w-[80%] bg-fifth-color dark:bg-fourth-dark py-4 px-5 rounded-[10px]">
+
+                        <div class="flex gap-4 items-center mb-2">
+                            <span class="text-xl font-bold">5</span>
+                            <span class="text-xl font-bold">70%</span>
+                            <div class="w-full bg-gray-300 dark:bg-needed-dark rounded-full">
+                                <div class="bg-yellow-500 text-xs font-medium
+                             text-white text-center p-0.5 leading-none rounded-full h-4 
+                             flex items-center justify-center" style="width: 70%"> 70%</div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-center mb-2">
+                            <span class="text-xl font-bold">4</span>
+                            <span class="text-xl font-bold">15%</span>
+                            <div class="w-full bg-gray-300 dark:bg-needed-dark rounded-full">
+                                <div class="bg-yellow-500 text-xs font-medium
+                             text-white text-center p-0.5 leading-none rounded-full h-4 
+                             flex items-center justify-center" style="width: 15%"> 15%</div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-center mb-2">
+                            <span class="text-xl font-bold">3</span>
+                            <span class="text-xl font-bold">10%</span>
+                            <div class="w-full bg-gray-300 dark:bg-needed-dark rounded-full">
+                                <div class="bg-yellow-500 text-xs font-medium
+                             text-white text-center p-0.5 leading-none rounded-full h-4 
+                             flex items-center justify-center" style="width: 10%"> 10%</div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-center mb-2">
+                            <span class="text-xl font-bold">2</span>
+                            <span class="text-xl font-bold">4%</span>
+                            <div class="w-full bg-gray-300 dark:bg-needed-dark rounded-full">
+                                <div class="bg-yellow-500 text-xs font-medium
+                             text-white text-center p-0.5 leading-none rounded-full h-4 
+                             flex items-center justify-center" style="width: 4%"> 4%</div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-center mb-2">
+                            <span class="text-xl font-bold">1</span>
+                            <span class="text-xl font-bold">1%</span>
+                            <div class="w-full bg-gray-300 dark:bg-needed-dark rounded-full">
+                                <div class="bg-yellow-500 text-xs font-medium
+                             text-white text-center p-0.5 leading-none rounded-full h-4 
+                             flex items-center justify-center" style="width: 1%"> 1%</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="widgets md:w-[25%] md:h-full pb-5 md:mt-15  mb-5 shrink-0 
+            md:sticky md:top-[80px]">
+                <h2 class="text-3xl font-bold text-seventh-color dark:text-fifth-dark pb-3 pr-3">كافة التصنيفات</h2>
+                <div class="bg-fifth-color dark:bg-fourth-dark  p-1 rounded-[10px]">
+                    <div class="categories mt-5 pr-3">
+                        <a href="">
+                            <h3 class="text-xl text-seventh-color dark:text-fifth-dark  font-medium mb-3">الريجيم</h3>
+                        </a>
+                        <a href="">
+                            <h3 class="text-xl text-seventh-color dark:text-fifth-dark font-medium mb-3">الخلايا الجذعية
+                            </h3>
+                        </a>
+                        <a href="">
+                            <h3 class="text-xl text-seventh-color dark:text-fifth-dark font-medium mb-3">الأمراض
+                                السرطانية</h3>
+                        </a>
+                        <a href="">
+                            <h3 class="text-xl text-seventh-color dark:text-fifth-dark font-medium mb-3">الحمل والولادة
+                            </h3>
+                        </a>
+                        <a href="">
+                            <h3 class="text-xl text-seventh-color dark:text-fifth-dark font-medium mb-3">الفيروسات
+                                الهجينة</h3>
+                        </a>
+                        <a href="">
+                            <h3 class="text-xl text-seventh-color dark:text-fifth-dark font-medium mb-3">طب الأطفال</h3>
+                        </a>
+
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-seventh-color pt-10 pb-3 pr-3 dark:text-fifth-dark">أحدث الأخبار</h2>
+                <div
+                    class="all-categories text-seventh-color dark:text-fifth-dark rounded-[10px] bg-fifth-color dark:bg-fourth-dark  p-1">
+                    <div class="categories rounded-[20px] mt-5 px-3">
+                        <div class="flex justify-between items-center my-2">
+                            <div>
+                                <h2 class="font-bold">طفلك بمرحلة النمو؟ تجنبي هذا الخطأ في تغذيته</h2>
+                                <i class="fa-regular fa-square-check"></i>
+                                أيلول / 2026
+                            </div>
+                            <img class="w-[70px] h-[70px] object-cover rounded-[6px]" src="assets/images/ch.png" alt="">
+                        </div>
+                        <hr class="text-needed-color">
+                        <div class="flex justify-between items-center my-2">
+                            <div>
+                                <h2 class="font-bold">من الإبر إلى الحبوب: مستقبل علاجات فقدان الوزن في 2027</h2>
+                                <i class="fa-regular fa-square-check"></i>
+                                آب / 2026
+                            </div>
+                            <img class="w-[70px] h-[70px] object-cover rounded-[6px]" src="assets/images/diet.png"
+                                alt="">
+                        </div>
+                        <hr class="text-needed-color">
+                        <div class="flex justify-between items-center my-2">
+                            <div>
+                                <h2 class="font-bold">الشاي المثلج أم المشروبات الغازية: أيهما أسوأ لسكر الدم؟ </h2>
+                                <i class="fa-regular fa-square-check"></i>
+                                آب / 2026
+                            </div>
+                            <img class="w-[70px] h-[70px] object-cover rounded-[6px]" src="assets/images/tea.webp"
+                                alt="">
+                        </div>
+                        <hr class="text-needed-color">
+                        <div class="flex justify-between items-center my-2">
+                            <div>
+                                <h2 class="font-bold">أطعمة تحتوي على مغنيسيوم أكثر من الشوكولاتة الداكنة</h2>
+                                <i class="fa-regular fa-square-check"></i>
+                                تموز / 2026
+                            </div>
+                            <img class="w-[70px] h-[70px] object-cover rounded-[6px]" src="assets/images/mag.webp"
+                                alt="">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <!--  -->
+
+
+
+
+
+    <!-- Footer Section Start -->
+    <footer class=" border-[5px] z-0 border-t-green-800 relative" style="background-image: url('./assets/images/ff.jpg'); background-position: center; 
+     background-repeat:no-repeat;
+    background-size: cover;">
+        <div class="absolute z-10 w-full h-full bg-[#085730ce]"></div>
+
+        <div class="z-20 relative max-w-7xl mx-auto grid grid-cols-1 
+        md:grid-cols-2 lg:grid-cols-4 gap-5 pt-[35px]
+        p-1 md:px-0 px-5">
+            <div class="f1-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">منصة ميد بَلس</h3>
+                <p class=" text-gray-200 leading-9 w-[80%]"> صُممت خصيصاً لتكون رفيقك الدائم في رحلتك المهنية، سواء كنت
+                    طالباً في كليتك الطبية تبحث عن تبسيط المفاهيم المعقدة، أو ممارساً صحياً يسعى لتحديث مهاراته ومواكبة
+                    أحدث المستجدات والأبحاث العالمية.
+                </p>
+
+            </div>
+
+            <div class="f2-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">أهم الروابط</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="index.html" class="text-gray-200">الرئيسية</a></li>
+                    <li><a href="" class="text-gray-200">الكورسات</a></li>
+                    <li><a href="" class="text-gray-200">الاستشارات</a></li>
+                    <li><a href="" class="text-gray-200">المدونة</a></li>
+                    <li><a href="" class="text-gray-200">اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div class="f2-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">أهم الكورسات</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="" class="text-gray-200">الاسعافات الأولية</a></li>
+                    <li><a href="" class="text-gray-200">التقويم التجميلي</a></li>
+                    <li><a href="" class="text-gray-200">التحاليل المخبرية</a></li>
+                    <li><a href="" class="text-gray-200">الكيمياء الحيوية</a></li>
+                    <li><a href="" class="text-gray-200">النسج</a></li>
+                </ul>
+            </div>
+            <div class="f4-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">النشرة البريدية</h3>
+                <form action="" class="flex flex-col gap-3">
+                    <input type="eamil" placeholder="البريد الإلكتروني" class=" caret-gray-100 border border-gray-100
+                     px-[8px] py-[4px] rounded-[5px] placeholder:text-gray-50 h-10">
+                    <button class="btn bg-sixth-color text-white dark:bg-fifth-dark dark:text-needed-dark font-bold">
+                        اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 items-center justify-between
+         text-white border-t-[1px] border-gray-600 py-[15px]">
+            <p>كافة الحقوق محفوظة لمنصة ميد بَلس</p>
+            <p>تصميم وبرمجة بشرى القاوي</p>
+        </div>
+
+
+
+    </footer>
+    <!-- Footer Section End -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="assets/js/flowbite.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-second-color: #dff5cd;
+  --color-third-color: #B0E0E6;
+  --color-fifth-color: #f0f3bd; 
+  --color-needed-color: #fcfcdd; 
+  --color-sixth-color: rgb(5, 133, 5);
+  --color-seventh-color: #4A3525;
+  --color-new-color: #608038;
+
+  --color-second-dark: #0B1315 ;
+  --color-third-dark: #162224;
+  --color-fourth-dark: #395a4f;
+  --color-nn-dark: #558b79;
+  /* --color-mm-dark: #558b797a; */
+
+  --color-needed-dark: #0b3828;
+
+  --color-fifth-dark: #E6ECEF;
+  --color-needed-dark1: #14B8A6 ;
+  --color-sixth-dark: #A7F3D0 ;
+
+
+  
+}
+
+html {
+  overflow-x: hidden;
+
+}
+
+body {
+  font-family: cairo;
+  height: 8000px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: Almarai;
+}
+
+nav ul li:hover {
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn {
+    /* background-color: rgb(0, 128, 0); */
+    /* color: white; */
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    filter: brightness(90%);
+    /* background-color: ; */
+}
+
+.img-translate {
+    animation: translate-img 1s ease-in-out;
+
+}
+
+ @keyframes translate-img {
+    0%,
+    100% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
+
+
+   .blog p {
+    height: 80px !important;
+    overflow: hidden !important;
+
+    -webkit-line-clamp: 2 !important;
+    line-clamp: 2 !important;
+    
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+
+    text-align: center;
+}
+
+
+
+/* --color-main-color: #05668d;
+  --color-second-color: #028090;
+  --color-third-color: #00a896;
+  --color-fourth-color: #02c39a;
+  --color-fifth-color: #f0f3bd; */
+  /* يمكنك أيضاً إضافة درجات مختلفة إذا أردت */
+  /* --color-main-dark: #1d4ed8; */

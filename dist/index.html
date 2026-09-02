@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedPulse | الرئيسية</title>
+    <link rel="icon" href="assets/images/logo.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="bg-fifth-color dark:bg-third-dark fixed shadow-xs w-full z-20 top-0 start-0 border-default">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="assets/images/logo.png" class=" h-[70px] object-cover"
+                    alt="medPulse Logo" />
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="text-white bg-new-color
+                 rounded-[5px]
+                 hover:bg-brand-strong box-border border 
+                    border-transparent focus:ring-4 
+                    focus:ring-brand-medium shadow-xs font-medium leading-7 rounded-base text-sm px-3 
+                    py-2 focus:outline-none cursor-pointer md:text-xl text-lg font-bold">تسجيل الدخول</button>
+                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body dark:text-white
+                     rounded-base md:hidden hover:bg-neutral-secondary-soft
+                      hover:text-heading focus:outline-none" aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                            d="M5 7h14M5 12h14M5 17h14" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between text-xl hidden w-full md:flex md:w-auto md:order-1"
+                id="navbar-sticky">
+                <ul class="flex items-center flex-col p-4 md:p-0 mt-4 font-medium border border-default
+                     rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row 
+                     md:mt-0 md:border-0 md:bg-neutral-primary text-seventh-color dark:text-fifth-dark">
+                    <li>
+                        <a href="#" class="block py-2 px-3 bg-brand rounded md:bg-transparent 
+                        md:text-fg-brand md:p-0" aria-current="page">الرئيسية</a>
+                    </li>
+                    <li>
+                        <a href="#all-courses" class="block py-2 px-3 text-heading 
+                            rounded hover:bg-neutral-tertiary md:hover:bg-transparent 
+                            md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">الكورسات</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">الاستشارات</a>
+                    </li>
+                    <li>
+                        <a href="#all-blogs" class="block py-2 px-3 text-heading
+                             rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 
+                             md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">المدونة</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary 
+                            md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0
+                             md:dark:hover:bg-transparent">اتصل بنا</a>
+                    </li>
+
+                    <li class="mr-5">
+                        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 
+                            dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5">
+                            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Hero Section Start -->
+    <section class="hero mt-[70px] py-10 bg-linear-to-r from-second-color to-third-color 
+        dark:bg-linear-to-b dark:from-second-dark dark:to-fifth-dark " u89ykhm>
+        <div class="max-w-7xl flex flex-col-reverse md:flex-row mx-auto">
+            <div class="hero-info w-full md:w-1/2 flex flex-col justify-center dark:text-white">
+                <h1 class="text-seventh-color dark:text-fifth-dark text-5xl font-bold leading-16 mb-5
+                 text-center md:text-right">منصة ميد بـَلس للتعليم الطبي</h1>
+                <h2
+                    class="text-sixth-color text-3xl font-bold leading-10 mb-5 dark:text-white text-center md:text-right">
+                    بوابتك لإتقان العلوم الطبية والتميز المهني</h2>
+                <p class="w-full md:w-[90%] leading-11 text-center md:text-right px-2 text-xl">
+                    في عالم الطب المتسارع، لا يتوقف التعلم عند نيل الشهادة. منصتنا التعليمية الطبية صُممت خصيصاً لتكون
+                    رفيقك الدائم في رحلتك المهنية، سواء كنت طالباً في كليتك الطبية تبحث عن تبسيط المفاهيم المعقدة، أو
+                    ممارساً صحياً يسعى لتحديث مهاراته ومواكبة أحدث المستجدات والأبحاث العالمية. </p>
+                <div class="mt-6 flex justify-center md:justify-start gap-4">
+                    <button class="btn bg-sixth-color text-white">تواصل معنا</button>
+                    <button class="btn bg-sixth-color text-white">اشترك الآن</button>
+                </div>
+            </div>
+            <div class="hero-img w-full md:w-1/2 flex  justify-center md:justify-end md:items-start relative">
+                <img class="w-[80%] md:w-[90%]" src="assets/images/hhh.png" alt="">
+                <img class="hidden md:flex  absolute bottom-[-100px] left-[110px] opacity-70 img-translate" width="400"
+                    src="assets/images/categories/oo.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Features Section Start -->
+    <section class="features py-10 dark:bg-fourth-dark">
+        <h2 class="text-center text-4xl font-bold text-sixth-color mb-4 dark:text-gray-200">لماذا عليك اختيارنا</h2>
+        <p class="text-center md:w-[65%] w-[90%] mx-auto dark:text-gray-200">
+            نجمع بين جودة المحتوى الأكاديمي وسهولة التجربة الرقمية لتلبية احتياجات الطلاب والممارسين في المجال الطبي.
+            نحن لا نقدم مجرد دورات تدريبية، بل نبني بيئة تعليمية متكاملة تدعم مسيرتك المهنية من البداية وحتى التميز.
+        </p>
+        <div class="max-w-7xl mx-auto  boxes grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6 p-4">
+
+            <div class="box text-center p-6 mb-3.5 bg-needed-color text-seventh-color dark:bg-needed-dark  
+            rounded-[10px] cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out"
+                style="box-shadow: 1px 1px 5px green, -1px -1px 5px brown;">
+                <i class="fa-solid fa-file-circle-check  dark:text-gray-200 text-4xl mb-2"></i>
+                <h3 class="text-2xl font-bold dark:text-white mb-2.5">جودة المحتوى</h3>
+                <p class="dark:text-gray-200"> نعتمد على أحدث المراجع الطبية العالمية والمناهج المحدثة دورياً.</p>
+            </div>
+
+
+            <div class="box text-center p-6 mb-3.5 bg-needed-color text-seventh-color dark:bg-needed-dark  rounded-[10px] cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out"
+                style="box-shadow: 1px 1px 5px green, -1px -1px 5px brown;">
+                <i class="fa-solid fa-laptop-house  dark:text-gray-200 text-4xl mb-2"></i>
+                <h3 class="text-2xl font-bold dark:text-white mb-2.5">تجربة تعلم ذكية ومرنة</h3>
+                <p class="dark:text-gray-200">يمكنك الدراسة في أي وقت ومن أي مكان عبر تطبيق الهاتف أو الموقع الإلكتروني.
+                </p>
+            </div>
+
+            <div class="box text-center p-6 mb-3.5 bg-needed-color text-seventh-color dark:bg-needed-dark  rounded-[10px] cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out"
+                style="box-shadow: 1px 1px 5px green, -1px -1px 5px brown;">
+                <i class="fa-solid fa-user-md  dark:text-gray-200 text-4xl mb-2"></i>
+                <h3 class="text-2xl font-bold dark:text-white mb-2.5">مجتمع طبي داعم</h3>
+                <p class="dark:text-gray-200">فرصة للتواصل المباشر مع المحاضرين والزملاء لمناقشة الحالات الطبية.</p>
+            </div>
+
+            <div class="box text-center p-6 mb-3.5 bg-needed-color text-seventh-color dark:bg-needed-dark  rounded-[10px] cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out"
+                style="box-shadow: 1px 1px 5px green, -1px -1px 5px brown;">
+                <i class="fas fa-th-large dark:text-gray-200 text-4xl mb-2"></i>
+                <h3 class="text-2xl font-bold dark:text-white mb-2.5">تنوع الاختصاصات</h3>
+                <p class="dark:text-gray-200">نغطي مختلف المجالات الطبية من طب بشري، صيدلة، تمريض، وطب أسنان.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section End -->
+
+    <!-- Categories Section Start -->
+    <section class=" py-10 bg-needed-color dark:bg-needed-dark ">
+        <h2 class="text-center md:text-4xl text-[34px] font-bold text-sixth-color mb-4 dark:text-gray-200">أنواع
+            الكورسات المتوفرة</h2>
+
+        <div class="categories max-w-7xl mx-auto grid
+         grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mt-10 p-3 gap-4 ">
+
+            <div class="course-category flex items-center justify-between bg-fifth-color text-seventh-color
+             dark:bg-fourth-dark p-2 rounded-md cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out">
+                <h3 class="text-xl font-bold dark:text-gray-200">طب الأطفال</h3>
+                <img style="width: 60px; height: 60px;" class="rounded-full border border-amber-900 object-cover"
+                    src="assets/images/categories/child.jpg" alt="">
+            </div>
+            <div class="course-category flex items-center justify-between bg-fifth-color text-seventh-color
+             dark:bg-fourth-dark p-2 rounded-md cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out">
+                <h3 class="text-xl font-bold dark:text-gray-200">طب العيون</h3>
+                <img style="width: 60px; height: 60px;" class="rounded-full border border-amber-900 object-cover"
+                    src="assets/images/categories/eye.jpg" alt="">
+            </div>
+            <div class="course-category flex items-center justify-between bg-fifth-color text-seventh-color
+             dark:bg-fourth-dark p-2 rounded-md cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out">
+                <h3 class="text-xl font-bold dark:text-gray-200">طب الأسنان</h3>
+                <img style="width: 60px; height: 60px;" class="rounded-full border border-amber-900 object-cover"
+                    src="assets/images/categories/teeth.jpg" alt="">
+            </div>
+            <div class="course-category flex items-center justify-between bg-fifth-color text-seventh-color
+             dark:bg-fourth-dark p-2 rounded-md cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out">
+                <h3 class="text-xl font-bold dark:text-gray-200">التمريض</h3>
+                <img style="width: 60px; height: 60px;" class="rounded-full border border-amber-900 object-cover"
+                    src="assets/images/categories/nurse.jpg" alt="">
+            </div>
+            <div class="course-category flex items-center justify-between bg-fifth-color text-seventh-color
+             dark:bg-fourth-dark p-2 rounded-md cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out">
+                <h3 class="text-xl font-bold dark:text-gray-200">طب الأعصاب</h3>
+                <img style="width: 60px; height: 60px;" class="rounded-full border border-amber-900 object-cover"
+                    src="assets/images/categories/neu.jpg" alt="">
+            </div>
+            <div class="course-category flex items-center justify-between bg-fifth-color text-seventh-color
+             dark:bg-fourth-dark p-2 rounded-md cursor-pointer
+            hover:translate-1 transition-all duration-500 ease-in-out">
+                <h3 class="text-xl font-bold dark:text-gray-200">طب الأورام</h3>
+                <img style="width: 60px; height: 60px;" class="rounded-full border border-amber-900 object-cover"
+                    src="assets/images/categories/cancer.jpg" alt="">
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Categories Section End -->
+
+    <!-- Course Section Start -->
+    <section id="all-courses" class="all-courses bg-white dark:bg-fourth-dark py-10 px-3 ">
+        <h2 class="text-center text-4xl font-bold text-sixth-color mb-4 dark:text-gray-200">الكورسات المتوفرة</h2>
+
+        <div class="swiper max-w-7xl mx-auto md:mr-5">
+            <div class=" swiper-wrapper courses
+           mt-8">
+                <div class="swiper-slide course bg-needed-color
+                 dark:bg-needed-dark rounded-md overflow-hidden
+              hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+              relative">
+                    <div class="course-img w-full h-50">
+                        <img class="w-full h-full object-cover" src="assets/images/categories/tashreh.jfif" alt="">
+                    </div>
+                    <div class="course-info p-2">
+                        <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">كورس النسج
+                        </h3>
+
+                        <div class="price flex justify-around text-xl text-seventh-color dark:text-gray-200 mt-8">
+                            <div>
+                                <span>السعر:</span>
+                                <span class="line-through">100$</span>
+                            </div>
+                            <span>$70</span>
+                        </div>
+                        <a href="course-details.html" class="flex justify-center bg-sixth-color text-white dark:bg-fifth-dark  dark:text-fourth-dark
+                             md:text-xl text-lg px-5 md:py-3 py-1 mt-3 w-full rounded-md">تفاصيل
+                            الكورس</a>
+                    </div>
+
+                </div>
+                <div class="swiper-slide course bg-needed-color dark:bg-needed-dark rounded-md overflow-hidden
+              hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+              relative">
+
+                    <div class="course-img w-full h-50">
+                        <img class="w-full h-full object-cover" src="assets/images/categories/tash.webp" alt="">
+                    </div>
+                    <div class="course-info p-2">
+                        <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">كورس
+                            التشريح
+                        </h3>
+
+                        <div class="price flex justify-around text-xl text-seventh-color dark:text-gray-200 mt-8">
+                            <div>
+                                <span>السعر:</span>
+                                <span class="line-through">100$</span>
+                            </div>
+                            <span>$70</span>
+                        </div>
+                        <a href="course-details.html" class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark text-white
+                             md:text-xl text-lg px-5 md:py-3 py-1 mt-3 w-full rounded-md">تفاصيل
+                            الكورس</a>
+                    </div>
+
+                </div>
+                <div class="swiper-slide course bg-needed-color dark:bg-needed-dark
+                 rounded-md overflow-hidden
+              hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+              relative">
+
+                    <div class="course-img w-full h-50">
+                        <img class="w-full h-full object-cover" src="assets/images/categories/chemistry.jfif" alt="">
+                    </div>
+                    <div class="course-info p-2">
+                        <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">الكيمياء
+                            الحيوية
+                        </h3>
+
+                        <div class="price flex justify-around text-xl text-seventh-color dark:text-gray-200 mt-8">
+                            <div>
+                                <span>السعر:</span>
+                                <span class="line-through">100$</span>
+                            </div>
+                            <span>$70</span>
+                        </div>
+                        <a href="course-details.html" class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark text-white
+                             md:text-xl text-lg px-5 md:py-3 py-1 mt-3 w-full rounded-md">تفاصيل
+                            الكورس</a>
+                    </div>
+
+                </div>
+                <div class="swiper-slide course bg-needed-color dark:bg-needed-dark rounded-md overflow-hidden
+              hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+              relative">
+
+                    <div class="course-img w-full h-50">
+                        <img class="w-full h-full object-cover" src="assets/images/categories/tahlil.jfif" alt="">
+                    </div>
+                    <div class="course-info p-2">
+                        <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">التحاليل
+                            المخبرية
+                        </h3>
+
+                        <div class="price flex justify-around text-xl text-seventh-color dark:text-gray-200 mt-8">
+                            <div>
+                                <span>السعر:</span>
+                                <span class="line-through">100$</span>
+                            </div>
+                            <span>$70</span>
+                        </div>
+                        <a href="course-details.html" class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark text-white
+                             md:text-xl text-lg px-5 md:py-3 py-1 mt-3 w-full rounded-md">تفاصيل
+                            الكورس</a>
+                    </div>
+
+                </div>
+                <div class="swiper-slide course bg-needed-color dark:bg-needed-dark rounded-md overflow-hidden
+              hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+              relative">
+
+                    <div class="course-img w-full h-50">
+                        <img class="w-full h-full object-cover" src="assets/images/categories/teeth.jpg" alt="">
+                    </div>
+                    <div class="course-info p-2">
+                        <h3 class="text-xl text-center font-bold text-slate-700 dark:text-gray-200 my-3">تقويم الأسنان
+                        </h3>
+
+                        <div class="price flex justify-around text-xl text-slate-700 dark:text-gray-200 mt-8">
+                            <div>
+                                <span>السعر:</span>
+                                <span class="line-through">100$</span>
+                            </div>
+                            <span>$70</span>
+                        </div>
+                        <a href="course-details.html" class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark text-white
+                             md:text-xl text-lg px-5 md:py-3 py-1 mt-3 w-full rounded-md">تفاصيل
+                            الكورس</a>
+                    </div>
+
+                </div>
+                <div class="swiper-slide course bg-needed-color
+                 dark:bg-needed-dark rounded-md overflow-hidden
+              hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+              relative">
+
+                    <div class="course-img w-full h-50">
+                        <img class="w-full h-full object-cover" src="assets/images/categories/aid.jpg" alt="">
+                    </div>
+                    <div class="course-info p-2">
+                        <h3 class="text-xl text-center font-bold text-slate-700 dark:text-gray-200 my-3">الإسعافات
+                            الأولية
+                        </h3>
+
+                        <div class="price flex justify-around text-xl
+                         text-slate-700 dark:text-gray-200 mt-8">
+                            <div>
+                                <span>السعر:</span>
+                                <span class="line-through">100$</span>
+                            </div>
+                            <span>$70</span>
+                        </div>
+                        <a href="course-details.html" class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark
+                             text-white
+                             md:text-xl text-lg px-5 md:py-3 py-1 mt-3 w-full rounded-md">تفاصيل
+                            الكورس</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="btn-controls flex gap-3 justify-center z-40 mt-5">
+                <div
+                    class="btn-next w-[40px] h-[40px]
+                       rounded-full bg-sixth-color dark:bg-needed-dark flex items-center justify-center cursor-pointer">
+                    <i class="fa-regular fa-square-caret-right text-white text-xl"></i>
+                </div>
+                <div
+                    class="btn-prev w-[40px] h-[40px]
+                       rounded-full bg-sixth-color dark:bg-needed-dark flex items-center justify-center cursor-pointer">
+                    <i class="fa-regular fa-square-caret-left text-white text-xl"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Course Section End -->
+
+    <!-- FAQ Section Start -->
+    <section class=" bg-needed-color dark:bg-needed-dark py-10">
+        <h2 class="text-center text-4xl font-bold text-sixth-color mb-4 dark:text-gray-200">الأسئلة الأكثر شيوعاً</h2>
+
+        <div class="main-faq max-w-7xl mx-auto grid md:grid-cols-2 grid-cols-1 items-center p-7 md:p-0">
+            <div class="faq-info">
+
+                <div id="accordion-color" data-accordion="collapse"
+                    data-active-classes="bg-second-color dark:bg-needed-dark text-sixth-color dark:text-gray-200" class="rounded-lg border border-fifth-color overflow-hidden shadow-sm bg-fifth-color
+                     text-slate-900 dark:bg-fourth-dark dark:text-gray-200">
+                    <h2 id="accordion-color-heading-1">
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body 
+                            rounded-t-base border border-t-0 border-x-0 border-fifth-color
+                             dark:border-gray-500
+                             hover:text-sixth-color hover:dark:bg-needed-dark
+                              hover:bg-second-color hover:dark:text-gray-200 gap-3"
+                            data-accordion-target="#accordion-color-body-1" aria-expanded="true"
+                            aria-controls="accordion-color-body-1">
+                            <span>ما هي الدورات التي تقدمها المنصة؟</span>
+                            <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m5 15 7-7 7 7" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="accordion-color-body-1" class="hidden border border-s-0 border-e-0 border-t-0 border-gray-300 
+                        dark:border-gray-500 bg-gray-50
+                         dark:bg-nn-dark " aria-labelledby="accordion-color-heading-1">
+                        <div class="p-4 md:p-5">
+                            <p class="mb-2 text-body">
+                                كورسات طبية من الألف إلى الياء، بجميع الاختصاصات
+                            </p>
+
+                        </div>
+                    </div>
+                    <h2 id="accordion-color-heading-2">
+
+
+
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body 
+                            rounded-t-base border border-t-0 border-x-0
+                             border-fifth-color dark:border-gray-500
+                             hover:text-sixth-color hover:dark:bg-needed-dark
+                             hover:bg-second-color hover:dark:text-gray-200 gap-3"
+                            data-accordion-target="#accordion-color-body-2" aria-expanded="true"
+                            aria-controls="accordion-color-body-2">
+                            <span>هل يمكن التسجيل لغير المختصين بالمجال الطبي؟</span>
+                            <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m5 15 7-7 7 7" />
+                            </svg>
+                        </button>
+
+                    </h2>
+                    <div id="accordion-color-body-2" class="hidden border border-s-0 border-e-0 border-t-0
+                     border-gray-300 dark:border-gray-500
+                         bg-gray-50 dark:bg-nn-dark " aria-labelledby="accordion-color-heading-2">
+                        <div class="p-4 md:p-5">
+                            <p class="mb-2 text-body">نعم، يمكن لكن بكورسات محددة
+                            </p>
+
+                        </div>
+                    </div>
+                    <h2 id="accordion-color-heading-3">
+
+
+                        <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body 
+                            rounded-t-base border border-t-0 border-x-0
+                             border-fifth-color dark:border-gray-500
+                             hover:text-sixth-color hover:dark:bg-needed-dark
+                              hover:bg-second-color hover:dark:text-gray-200 gap-3"
+                            data-accordion-target="#accordion-color-body-3" aria-expanded="true"
+                            aria-controls="accordion-color-body-3">
+                            <span>هل يتم منح شهادات عند إتمام الكورس؟</span>
+                            <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m5 15 7-7 7 7" />
+                            </svg>
+                        </button>
+
+
+                    </h2>
+                    <div id="accordion-color-body-3" class="hidden border border-s-0 border-e-0 border-t-0 
+                        border-gray-300   dark:border-gray-500
+                         bg-gray-50 dark:bg-nn-dark" aria-labelledby="accordion-color-heading-3">
+                        <div class="p-4 md:p-5">
+                            <p class="mb-2 text-body">
+                                يوجد شهادات معترف بها لدى المختصين بالمجال الطبي، ويوجد شهادات حضور لدى الأشخاص العاديين
+                            </p>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="faq-img md:flex md:justify-end hidden">
+                <img width="80%" src="assets/images/categories/second.png" alt="">
+            </div>
+
+        </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <!-- Blog Section Start -->
+    <section id="all-blogs" class="all-blog dark:bg-fourth-dark py-10">
+        <h2 class="text-center text-4xl font-bold text-sixth-color mb-4 dark:text-gray-200">أحدث المقالات الطبية</h2>
+
+        <div class="max-w-7xl mx-auto blogs grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 
+        md:gap-3  gap-9 mt-8 p-4 md:p-0">
+            <div class="blog bg-needed-color dark:bg-needed-dark rounded-md overflow-hidden
+             hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+             relative">
+                <div
+                    class="absolute top-1.25 right-1.25 bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark  px-2 py-1 rounded-md text-white">
+                    الريجيم</div>
+                <div class="course-img w-full h-50">
+                    <img class="w-full h-full object-cover" src="assets/images/diet.png" alt="">
+                </div>
+                <div class="course-info p-2">
+                    <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">
+
+                        من الإبر إلى الحبوب: مستقبل علاجات فقدان الوزن في 2027
+                    </h3>
+                    <p class="text-seventh-color dark:text-gray-200">
+                        تطورت علاجات فقدان الوزن بشكل ملحوظ في الفترة الأخيرة....
+                    </p>
+
+                    <div class="auth flex justify-start ps-5 gap-3 text-xl text-seventh-color dark:text-gray-200 mt-8">
+                        <img class="object-cover rounded-full" src="assets/images/avatar.jfif"
+                            style="height: 50px; width: 50px;" alt="">
+                        <div>
+                            <h3>ثواب الغبرة</h3>
+                            <span class="text-[13px]">August.22.2026</span>
+                        </div>
+                    </div>
+                    <a href="single-post.html"
+                        class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark  text-white text-xl px-5 py-3 mt-3 w-full rounded-md">اقرأ
+                        المزيد</a>
+                </div>
+
+            </div>
+
+            <div class="blog bg-needed-color dark:bg-needed-dark rounded-md overflow-hidden
+             hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+             relative">
+                <div
+                    class="absolute top-1.25 right-1.25 bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark px-2 py-1 rounded-md text-white">
+                    طب الأطفال</div>
+                <div class="course-img w-full h-50">
+                    <img class="w-full h-full object-cover" src="assets/images/ch.png" alt="">
+                </div>
+                <div class="course-info p-2">
+                    <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">
+
+                        طفلك في مرحلة النمو؟ تجنبي هذا الخطأ في تغذيته
+                    </h3>
+                    <p class="text-seventh-color dark:text-gray-200">
+                        خلال رحلة نمو الطفل المحفوفة بالمغامرات والأحداث الهامة في حياة الوالدين وفي حياة طفلهما ....
+                    <div class="auth flex justify-start ps-5 gap-3 text-xl text-seventh-color dark:text-gray-200 mt-8">
+                        <img class="object-cover rounded-full" src="assets/images/bana.jfif"
+                            style="height: 50px; width: 50px;" alt="">
+                        <div>
+                            <h3>رنا رمضان</h3>
+                            <span class="text-[13px]">August.30.2026</span>
+                        </div>
+                    </div>
+                    <a href="single-post.html"
+                        class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark text-white text-xl px-5 py-3 mt-3 w-full rounded-md">اقرأ
+                        المزيد</a>
+                </div>
+
+            </div>
+            <div class="blog bg-needed-color dark:bg-needed-dark rounded-md overflow-hidden
+             hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+             relative">
+                <div
+                    class="absolute top-1.25 right-1.25 bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark px-2 py-1 rounded-md text-white">
+                    تغذية</div>
+                <div class="course-img w-full h-50">
+                    <img class="w-full h-full object-cover" src="assets/images/tea.webp" alt="">
+                </div>
+                <div class="course-info p-2">
+                    <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">
+
+                        الشاي المثلج أم المشروبات الغازية: أيهما أسوأ لسكر الدم؟
+                    </h3>
+                    <p class="text-seventh-color dark:text-gray-200">
+                        تحتوي المشروبات المُحلّاة والعصائر الجاهزة على كمياتٍ مرتفعة من السّكريات البسيطة، وبذلك قد تؤدي
+                        ... </p>
+
+                    <div class="auth flex justify-start ps-5 gap-3 text-xl text-seventh-color dark:text-gray-200 mt-8">
+                        <img class="object-cover rounded-full" src="assets/images/hashem.jpg"
+                            style="height: 50px; width: 50px;" alt="">
+                        <div>
+                            <h3>أحمد مريم</h3>
+                            <span class="text-[13px]"> Sep.1.2026</span>
+                        </div>
+                    </div>
+                    <a href="single-post.html"
+                        class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark text-white text-xl px-5 py-3 mt-3 w-full rounded-md">اقرأ
+                        المزيد</a>
+                </div>
+
+            </div>
+
+
+            <div class="blog bg-needed-color dark:bg-needed-dark rounded-md overflow-hidden
+             hover:translate-1 transition-all duration-500 ease-in-out cursor-pointer
+             relative">
+                <div
+                    class="absolute top-1.25 right-1.25 bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark px-2 py-1 rounded-md text-white">
+                    تغذية</div>
+                <div class="course-img w-full h-50">
+                    <img class="w-full h-full object-cover" src="assets/images/mag.webp" alt="">
+                </div>
+                <div class="course-info p-2">
+                    <h3 class="text-xl text-center font-bold text-seventh-color dark:text-gray-200 my-3">
+
+                        أطعمة تحتوي على مغنيسيوم أكثر من الشوكولاتة الداكنة
+                    </h3>
+                    <p class="text-seventh-color dark:text-gray-200">
+                        يعرف المغنيسيوم بأهميته للأعصاب وإنتاج الطاقة وغالبا ما يذكر أن الشوكولا الداكنة...
+                    </p>
+
+                    <div class="auth flex justify-start ps-5 gap-3 text-xl text-seventh-color dark:text-gray-200 mt-8">
+                        <img class="object-cover rounded-full" src="assets/images/isam.jpg"
+                            style="height: 50px; width: 50px;" alt="">
+                        <div>
+                            <h3>عمار العوا</h3>
+                            <span class="text-[13px]"> Sep.1.2026</span>
+                        </div>
+                    </div>
+                    <a href="single-post.html"
+                        class="flex justify-center bg-sixth-color dark:bg-fifth-dark  dark:text-fourth-dark text-white text-xl px-5 py-3 mt-3 w-full rounded-md">اقرأ
+                        المزيد</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    <!-- Blog Section End -->
+
+
+
+    <!-- Footer Section Start -->
+    <footer class=" border-[5px] z-0 border-t-green-800  relative" style="background-image: url('./assets/images/ff.jpg'); background-position: center; 
+     background-repeat:no-repeat;
+    background-size: cover;">
+        <div class="absolute z-10 w-full h-full bg-[#085730ce]"></div>
+
+        <div class="z-20 relative max-w-7xl mx-auto grid grid-cols-1 
+        md:grid-cols-2 lg:grid-cols-4 gap-5 pt-[35px]
+        p-1 md:px-0 px-5">
+            <div class="f1-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">منصة ميد بَلس</h3>
+                <p class=" text-gray-200 leading-9 w-[80%]"> صُممت خصيصاً لتكون رفيقك الدائم في رحلتك المهنية، سواء كنت
+                    طالباً في كليتك الطبية تبحث عن تبسيط المفاهيم المعقدة، أو ممارساً صحياً يسعى لتحديث مهاراته ومواكبة
+                    أحدث المستجدات والأبحاث العالمية.
+                </p>
+
+            </div>
+
+            <div class="f2-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">أهم الروابط</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="#" class="text-gray-200">الرئيسية</a></li>
+                    <li><a href="" class="text-gray-200">الكورسات</a></li>
+                    <li><a href="" class="text-gray-200">الاستشارات</a></li>
+                    <li><a href="" class="text-gray-200">المدونة</a></li>
+                    <li><a href="" class="text-gray-200">اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div class="f2-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">أهم الكورسات</h3>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="" class="text-gray-200">الاسعافات الأولية</a></li>
+                    <li><a href="" class="text-gray-200">التقويم التجميلي</a></li>
+                    <li><a href="" class="text-gray-200">التحاليل المخبرية</a></li>
+                    <li><a href="" class="text-gray-200">الكيمياء الحيوية</a></li>
+                    <li><a href="" class="text-gray-200">النسج</a></li>
+                </ul>
+            </div>
+            <div class="f4-section">
+                <h3 class="mb-5 text-2xl text-gray-200 font-bold">النشرة البريدية</h3>
+                <form action="" class="flex flex-col gap-3">
+                    <input type="eamil" placeholder="البريد الإلكتروني" class=" caret-gray-100 border border-gray-100
+                     px-[8px] py-[4px] rounded-[5px] placeholder:text-gray-50 h-10">
+                    <button class="btn bg-sixth-color text-white dark:bg-fifth-dark dark:text-needed-dark font-bold">
+                        اشترك الآن</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 items-center justify-between
+         text-white border-t-[1px] border-gray-600 py-[15px]">
+            <p>كافة الحقوق محفوظة لمنصة ميد بَلس</p>
+            <p>تصميم وبرمجة بشرى القاوي</p>
+        </div>
+
+
+
+    </footer>
+    <!-- Footer Section End -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="assets/js/flowbite.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>
